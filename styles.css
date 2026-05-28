@@ -1,0 +1,356 @@
+:root {
+  --bg-0: #f6f7f9;
+  --bg-1: #ffffff;
+  --text-0: #111827;
+  --text-1: #334155;
+  --line: #dbe2ea;
+  --accent: #0f766e;
+  --accent-2: #f59e0b;
+  --card-shadow: 0 20px 55px rgba(15, 23, 42, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--text-0);
+  background:
+    radial-gradient(circle at 18% 14%, rgba(15, 118, 110, 0.12), transparent 38%),
+    radial-gradient(circle at 88% 16%, rgba(245, 158, 11, 0.14), transparent 40%),
+    linear-gradient(180deg, #f8fafc 0%, #eef2f6 100%);
+  padding: 1.4rem;
+  overflow-x: hidden;
+}
+
+.bg-orb {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: -1;
+  opacity: 0.45;
+  animation: float 8s ease-in-out infinite alternate;
+}
+
+.orb-a {
+  background: #0f766e;
+  top: -80px;
+  left: -100px;
+}
+
+.orb-b {
+  background: #f59e0b;
+  bottom: -140px;
+  right: -80px;
+  animation-delay: 1.1s;
+}
+
+.topbar {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.76);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.topbar a {
+  text-decoration: none;
+  color: var(--text-1);
+  font-weight: 500;
+}
+
+main {
+  max-width: 1120px;
+  margin: 1.2rem auto 0;
+}
+
+.hero,
+.section {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--card-shadow);
+}
+
+.hero {
+  padding: clamp(1.5rem, 2.4vw, 3rem);
+}
+
+.eyebrow {
+  display: inline-flex;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.14);
+  color: #115e59;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2rem, 4.8vw, 3.9rem);
+  line-height: 1.04;
+  margin: 0.8rem 0 1rem;
+  max-width: 760px;
+}
+
+.hero-copy {
+  color: var(--text-1);
+  max-width: 680px;
+  font-size: 1.03rem;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 0;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--text-0);
+  color: #fff;
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--text-0);
+  border: 1px solid var(--line);
+}
+
+.hero-panel {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 16px;
+  border: 1px dashed #b7c4d4;
+  background: #f8fafc;
+}
+
+.panel-label {
+  margin: 0;
+  color: #475569;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.panel-value {
+  margin: 0.3rem 0 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+.panel-text {
+  margin-top: 0.4rem;
+  color: #1e293b;
+}
+
+.section {
+  margin-top: 1.2rem;
+  padding: 1.2rem;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.section-head p {
+  color: var(--text-1);
+  margin-top: 0.45rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.filter-chip {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  padding: 0.45rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-chip.active {
+  border-color: transparent;
+  background: var(--accent);
+  color: #fff;
+}
+
+.trend-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.9rem;
+}
+
+.trend-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 1rem;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.trend-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 32px rgba(15, 23, 42, 0.12);
+}
+
+.tag {
+  display: inline-block;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.12);
+  color: #115e59;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.trend-card h3 {
+  margin: 0.65rem 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.trend-card p {
+  margin: 0;
+  color: var(--text-1);
+}
+
+.score {
+  margin-top: 0.85rem;
+  font-family: "IBM Plex Mono", monospace;
+  color: #0f172a;
+}
+
+.stats {
+  margin-top: 0.7rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.stat-item {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 0.85rem;
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.progress {
+  width: 100%;
+  background: #e8edf3;
+  border-radius: 999px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.progress > span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: inherit;
+  transition: width 0.9s ease;
+}
+
+.footer {
+  max-width: 1120px;
+  margin: 1rem auto 0;
+  color: #475569;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.8rem 0.3rem 0;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(18px);
+  }
+}
+
+@media (max-width: 800px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+
+  .hero-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulso Tech | Tecnologia em Movimento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <header class="topbar">
+      <div class="brand">Pulso Tech</div>
+      <nav>
+        <a href="#radar">Radar</a>
+        <a href="#lab">Lab</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero reveal">
+        <p class="eyebrow">Plataforma Interativa</p>
+        <h1>Tecnologia que acelera ideias e muda mercados</h1>
+        <p class="hero-copy">
+          Explore tendencias, dados e sinais do ecossistema digital em um painel
+          vivo com visual de alto impacto.
+        </p>
+
+        <div class="hero-actions">
+          <button id="fact-btn" class="btn btn-primary">Gerar insight rapido</button>
+          <button id="surprise-btn" class="btn btn-ghost">Tema surpresa</button>
+        </div>
+
+        <div class="hero-panel">
+          <div>
+            <p class="panel-label">Relogio global</p>
+            <p id="clock" class="panel-value">--:--:--</p>
+          </div>
+          <div>
+            <p class="panel-label">Insight do momento</p>
+            <p id="fact" class="panel-text">
+              IA aplicada em processos internos costuma reduzir retrabalho em ate 30%.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="radar" class="section reveal">
+        <div class="section-head">
+          <h2>Radar de Tendencias</h2>
+          <p>Filtre por categoria para acompanhar os sinais mais fortes.</p>
+        </div>
+
+        <div id="filters" class="filters"></div>
+        <div id="trend-grid" class="trend-grid"></div>
+      </section>
+
+      <section id="lab" class="section reveal">
+        <div class="section-head">
+          <h2>Lab de Adoção</h2>
+          <p>Metrica simulada de maturidade para frentes tecnologicas.</p>
+        </div>
+
+        <div id="stats" class="stats"></div>
+      </section>
+    </main>
+
+    <footer id="contato" class="footer">
+      <p>Projeto Tecnologia - HTML, CSS e JavaScript</p>
+      <p>2026 | Criado para ProjetoInovacaoIII</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
